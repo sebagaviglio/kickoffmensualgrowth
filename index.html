@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Kick Off Septiembre · Growth Bancor</title>
+<title>Kick-off Growth Digital · Septiembre 2026</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link href="https://fonts.googleapis.com/css2?family=Public+Sans:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
 <style>
@@ -23,186 +23,177 @@
     --ok-soft:#e4f6a1;
     --danger:#c6421b;
     --danger-soft:#fbe4dd;
+    --grey:#8fa3a1;
+    --grey-soft:#eef3f2;
   }
   *{box-sizing:border-box; margin:0; padding:0;}
   html{scroll-behavior:smooth;}
-  body{
-    font-family:'Public Sans', sans-serif;
-    background:var(--white);
-    color:var(--ink);
-    overflow-x:hidden;
-  }
+  body{ font-family:'Public Sans', sans-serif; background:var(--white); color:var(--ink); overflow-x:hidden; }
   ::selection{ background:var(--acid); color:var(--deep); }
   .num{ font-variant-numeric: tabular-nums; font-feature-settings:"tnum" 1; }
   .wrap{ max-width:1180px; margin:0 auto; padding:0 32px; position:relative; z-index:2; }
   section{ position:relative; overflow:hidden; }
   h1,h2,h3{ font-weight:900; letter-spacing:-.03em; }
 
-  /* ---------- ticker ---------- */
-  .ticker{
-    background:var(--deep); color:var(--acid); overflow:hidden; white-space:nowrap;
-    padding:9px 0; border-bottom:1px solid rgba(255,255,255,.08); position:relative; z-index:5;
-  }
+  .ticker{ background:var(--deep); color:var(--acid); overflow:hidden; white-space:nowrap; padding:9px 0; border-bottom:1px solid rgba(255,255,255,.08); position:relative; z-index:5; }
   .ticker-track{ display:inline-flex; gap:44px; animation:scroll 26s linear infinite; }
   .ticker-track span{ font-size:12px; font-weight:800; letter-spacing:.12em; text-transform:uppercase; opacity:.9; }
   .ticker-track span em{ font-style:normal; color:var(--orange); }
   @keyframes scroll{ from{ transform:translateX(0);} to{ transform:translateX(-50%);} }
 
-  /* ---------- nav dots ---------- */
-  .navdots{ position:fixed; right:26px; top:50%; transform:translateY(-50%); z-index:50; display:flex; flex-direction:column; gap:16px; }
-  .navdots a{ width:10px; height:10px; border-radius:50%; background:var(--mint-line); display:block; transition:all .3s ease; position:relative; }
+  .navdots{ position:fixed; right:26px; top:50%; transform:translateY(-50%); z-index:50; display:flex; flex-direction:column; gap:14px; }
+  .navdots a{ width:10px; height:10px; border-radius:50%; background:var(--mint-line); display:block; transition:all .3s ease; }
   .navdots a.active{ background:var(--orange); transform:scale(1.5); }
   @media(max-width:900px){ .navdots{ display:none; } }
 
-  /* ---------- section tab (signature) ---------- */
-  .tab{
-    display:inline-block; background:var(--orange); color:var(--white);
-    padding:9px 22px 10px; font-weight:900; text-transform:uppercase; letter-spacing:.08em; font-size:12px;
-    transform:skewX(-10deg); margin-bottom:26px;
-  }
+  .tab{ display:inline-block; background:var(--orange); color:var(--white); padding:9px 22px 10px; font-weight:900; text-transform:uppercase; letter-spacing:.08em; font-size:12px; transform:skewX(-10deg); margin-bottom:26px; }
   .tab span{ display:inline-block; transform:skewX(10deg); }
   .tab.on-dark{ background:var(--acid); color:var(--deep); }
-  .tab.ghost{ background:var(--deep); color:var(--acid); }
 
-  /* ---------- ghost numerals ---------- */
-  .ghost{
-    position:absolute; font-weight:900; line-height:.8; letter-spacing:-.06em;
-    pointer-events:none; user-select:none; z-index:0; font-size:clamp(220px,26vw,420px);
-  }
+  .ghost{ position:absolute; font-weight:900; line-height:.8; letter-spacing:-.06em; pointer-events:none; user-select:none; z-index:0; font-size:clamp(200px,24vw,400px); }
 
-  .section-title{ font-size:clamp(30px,5vw,58px); line-height:1.0; margin:0 0 14px; max-width:820px; }
-  .section-sub{ font-size:16px; font-weight:400; line-height:1.6; max-width:600px; opacity:.7; }
+  .section-title{ font-size:clamp(28px,4.6vw,52px); line-height:1.02; margin:0 0 14px; max-width:840px; }
+  .section-sub{ font-size:15.5px; font-weight:400; line-height:1.6; max-width:620px; opacity:.7; }
 
-  /* ---------- HERO ---------- */
-  .hero{
-    background:var(--deep); color:var(--white);
-    padding:80px 0 90px;
-  }
-  .hero .ghost{ color:rgba(255,255,255,.05); right:-40px; top:10px; }
-  .hero h1{ font-size:clamp(40px,7vw,78px); line-height:.98; margin:0 0 20px; max-width:920px; }
+  /* HERO */
+  .hero{ background:var(--deep); color:var(--white); padding:76px 0 84px; }
+  .hero .ghost{ color:rgba(255,255,255,.05); right:-40px; top:0px; }
+  .hero h1{ font-size:clamp(36px,6.4vw,70px); line-height:.98; margin:0 0 18px; max-width:940px; }
   .hero h1 em{ font-style:normal; color:var(--orange); }
   .hero h1 .pop{ color:var(--acid); }
-  .hero p.lede{ font-size:18px; max-width:600px; opacity:.68; line-height:1.6; font-weight:300; }
+  .hero p.lede{ font-size:17px; max-width:600px; opacity:.68; line-height:1.6; font-weight:300; }
 
-  .hero-kpis{ display:grid; grid-template-columns:repeat(3,1fr); gap:2px; margin-top:60px; background:rgba(255,255,255,.1); }
+  .disclaimer{ margin-top:28px; display:flex; gap:12px; align-items:flex-start; background:rgba(238,98,43,.12); border:1px solid rgba(238,98,43,.35); padding:16px 20px; border-radius:4px 18px 4px 18px; max-width:760px; }
+  .disclaimer .ico{ font-size:16px; flex:none; }
+  .disclaimer p{ font-size:13.5px; line-height:1.55; color:#ffd8c4; font-weight:500; }
+
+  .hero-kpis{ display:grid; grid-template-columns:repeat(3,1fr); gap:2px; margin-top:52px; background:rgba(255,255,255,.1); }
   @media(max-width:760px){ .hero-kpis{ grid-template-columns:1fr; } }
-  .hero-kpi{ background:var(--deep); padding:30px 28px 26px; border-top:4px solid var(--orange); }
+  .hero-kpi{ background:var(--deep); padding:28px 26px 24px; border-top:4px solid var(--danger); }
   .hero-kpi.ok{ border-top-color:var(--acid); }
-  .hero-kpi.danger{ border-top-color:#ff8a5c; }
   .hero-kpi .squad{ font-size:11.5px; font-weight:800; letter-spacing:.08em; text-transform:uppercase; color:rgba(255,255,255,.5); }
-  .hero-kpi .value{ font-size:clamp(38px,4vw,52px); font-weight:900; margin-top:10px; }
+  .hero-kpi .value{ font-size:clamp(36px,3.8vw,50px); font-weight:900; margin-top:10px; }
   .hero-kpi .frac{ font-size:12.5px; font-weight:600; opacity:.5; margin-top:4px; }
 
-  /* ---------- SECTION WRAPPER ---------- */
-  .block{ padding:100px 0 90px; }
+  /* SECTIONS */
+  .block{ padding:96px 0 86px; }
   .block.on-dark{ background:var(--deep); color:var(--white); }
   .block.on-light{ background:var(--white); color:var(--ink); }
   .block .ghost.light{ color:rgba(0,95,90,.05); }
   .block .ghost.dark{ color:rgba(255,255,255,.05); }
 
   .po-row{ display:flex; align-items:center; gap:12px; margin-top:22px; }
-  .po-badge{
-    width:42px; height:42px; border-radius:0 12px 0 12px; background:var(--orange); color:var(--white);
-    display:flex; align-items:center; justify-content:center; font-weight:900; font-size:13px; flex:none;
-  }
+  .po-badge{ width:42px; height:42px; border-radius:0 12px 0 12px; background:var(--orange); color:var(--white); display:flex; align-items:center; justify-content:center; font-weight:900; font-size:13px; flex:none; }
   .on-dark .po-badge{ background:var(--acid); color:var(--deep); }
   .po-name{ font-size:14.5px; font-weight:800; }
   .po-name span{ display:block; font-size:11px; font-weight:600; opacity:.55; text-transform:uppercase; letter-spacing:.05em; }
 
-  /* squad summary — big numeral + segmented meter */
-  .squad-summary{ display:flex; align-items:flex-end; gap:44px; flex-wrap:wrap; margin-top:52px; }
-  .squad-summary .big-value{ font-size:clamp(90px,11vw,168px); font-weight:900; line-height:.82; }
+  .squad-summary{ display:flex; align-items:flex-end; gap:44px; flex-wrap:wrap; margin-top:48px; }
+  .squad-summary .big-value{ font-size:clamp(80px,10vw,150px); font-weight:900; line-height:.82; }
   .squad-summary .big-frac{ font-size:14px; font-weight:700; opacity:.55; margin-top:8px; }
   .meter-wrap{ flex:1 1 320px; min-width:260px; padding-bottom:14px; }
-  .meter{ display:flex; gap:6px; }
+  .meter{ display:flex; gap:6px; align-items:center; }
   .meter .seg{ height:34px; flex:1; background:var(--mint-line); border-radius:3px; }
   .on-dark .meter .seg{ background:rgba(255,255,255,.1); }
-  .meter .seg.on{ background:var(--orange); }
   .meter .seg.on.ok{ background:var(--ok); }
   .meter .seg.on.danger{ background:var(--danger); }
+  .meter .overflow-chip{ margin-left:8px; font-size:11px; font-weight:900; color:var(--acid); background:var(--deep); padding:4px 9px; border-radius:6px; white-space:nowrap; }
+  .on-light .meter .overflow-chip{ background:var(--deep); }
   .meter-label{ font-size:11.5px; font-weight:700; text-transform:uppercase; letter-spacing:.06em; opacity:.5; margin-top:10px; }
 
-  /* ---------- product blocks ---------- */
+  /* meta chips */
+  .meta-row{ display:flex; flex-wrap:wrap; gap:10px; margin-top:22px; }
+  .meta-chip{ background:var(--mint); color:var(--green); font-size:12.5px; font-weight:800; padding:8px 14px; border-radius:999px; }
+  .on-dark .meta-chip{ background:rgba(255,255,255,.08); color:var(--acid); }
+  .meta-row .meta-label{ font-size:11px; font-weight:800; text-transform:uppercase; letter-spacing:.06em; opacity:.5; align-self:center; margin-right:2px; }
+
+  /* product blocks */
   .product-grid{ display:flex; flex-wrap:wrap; gap:16px; margin-top:44px; }
-  .stat-block{
-    flex:1 1 210px; min-width:200px; background:var(--white); border:1px solid var(--mint-line);
-    border-radius:4px 20px 4px 20px; padding:22px 22px 20px; position:relative; overflow:hidden;
-    transition:transform .3s ease, box-shadow .3s ease;
-  }
+  .stat-block{ flex:1 1 210px; min-width:200px; background:var(--white); border:1px solid var(--mint-line); border-radius:4px 20px 4px 20px; padding:22px 22px 20px; position:relative; overflow:hidden; transition:transform .3s ease, box-shadow .3s ease; }
   .on-dark .stat-block{ background:rgba(255,255,255,.04); border-color:rgba(255,255,255,.12); }
   .stat-block:hover{ transform:translateY(-6px); box-shadow:0 22px 44px -24px rgba(0,34,29,.4); }
   .corner{ position:absolute; top:0; right:0; width:0; height:0; border-style:solid; border-width:0 46px 46px 0; border-color:transparent; }
   .corner.ok{ border-color:transparent var(--ok) transparent transparent; }
   .corner.warn{ border-color:transparent var(--orange) transparent transparent; }
   .corner.danger{ border-color:transparent var(--danger) transparent transparent; }
-  .stat-block .pct{ font-size:clamp(30px,3vw,40px); font-weight:900; line-height:1; }
+  .corner.grey{ border-color:transparent var(--grey) transparent transparent; }
+  .stat-block .pct{ font-size:clamp(28px,3vw,38px); font-weight:900; line-height:1; }
   .stat-block .pname{ font-size:13px; font-weight:800; margin-top:10px; line-height:1.3; }
   .stat-block .frac{ font-size:11.5px; font-weight:600; opacity:.55; margin-top:6px; }
+  .stat-block .note{ font-size:11px; font-weight:600; opacity:.55; margin-top:6px; font-style:italic; }
   .stat-block .overflow-badge{ display:inline-block; margin-top:8px; font-size:10.5px; font-weight:900; background:var(--ok-soft); color:var(--ok); padding:3px 9px; border-radius:999px; }
+  .stat-block.neutral .pct{ color:var(--grey); font-size:20px; }
+  .stat-block.neutral .pname{ color:var(--ink); }
 
-  /* ---------- insight cards ---------- */
+  /* insight cards */
   .insight-grid{ display:grid; grid-template-columns:1fr 1fr; gap:18px; margin-top:40px; }
   @media(max-width:820px){ .insight-grid{ grid-template-columns:1fr; } }
-  .card{ background:var(--white); border-radius:4px 22px 4px 22px; padding:26px 26px 24px; border-left:5px solid var(--ok); border-top:1px solid var(--mint-line); border-right:1px solid var(--mint-line); border-bottom:1px solid var(--mint-line); }
+  .insight-grid.cols-3{ grid-template-columns:1fr 1fr 1fr; }
+  @media(max-width:980px){ .insight-grid.cols-3{ grid-template-columns:1fr 1fr; } }
+  @media(max-width:640px){ .insight-grid.cols-3{ grid-template-columns:1fr; } }
+  .card{ background:var(--white); border-radius:4px 22px 4px 22px; padding:24px 24px 22px; border-left:5px solid var(--ok); border-top:1px solid var(--mint-line); border-right:1px solid var(--mint-line); border-bottom:1px solid var(--mint-line); }
   .on-dark .card{ background:rgba(255,255,255,.04); border-top-color:rgba(255,255,255,.12); border-right-color:rgba(255,255,255,.12); border-bottom-color:rgba(255,255,255,.12); }
   .card.neg{ border-left-color:var(--danger); }
-  .card h4{ font-size:17px; font-weight:900; margin-bottom:10px; line-height:1.25; }
-  .card p{ font-size:14.5px; line-height:1.62; opacity:.78; font-weight:400; }
+  .card.note{ border-left-color:var(--grey); }
+  .card h4{ font-size:16.5px; font-weight:900; margin-bottom:9px; line-height:1.25; }
+  .card p{ font-size:14px; line-height:1.6; opacity:.78; font-weight:400; }
   .card .highlight{ color:var(--orange); font-weight:800; }
   .on-dark .card .highlight{ color:var(--acid); }
 
-  .action-card{
-    margin-top:20px; background:var(--acid); border-radius:4px 22px 4px 22px; padding:22px 26px;
-  }
-  .action-card .tag{ font-size:11px; font-weight:900; letter-spacing:.1em; text-transform:uppercase; color:var(--deep); opacity:.65; }
-  .action-card p{ font-size:15.5px; font-weight:700; margin-top:8px; line-height:1.5; color:var(--deep); }
+  /* levers / palancas grid */
+  .lever-row{ display:flex; gap:2px; margin-top:44px; flex-wrap:wrap; background:var(--mint-line); }
+  .on-dark .lever-row{ background:rgba(255,255,255,.1); }
+  .lever{ flex:1 1 250px; background:var(--white); padding:24px 22px; }
+  .on-dark .lever{ background:var(--deep); }
+  .lever .num-tag{ font-size:12px; font-weight:900; color:var(--orange); letter-spacing:.05em; }
+  .on-dark .lever .num-tag{ color:var(--acid); }
+  .lever p{ font-size:13.8px; font-weight:600; margin-top:8px; line-height:1.5; opacity:.88; }
+  .lever-title{ font-size:12.5px; font-weight:900; text-transform:uppercase; letter-spacing:.08em; opacity:.5; margin-top:44px; }
 
-  /* ---------- Slide 4: punto de partida ---------- */
-  .jump-grid{ display:grid; grid-template-columns:1fr 1fr; gap:18px; margin-top:48px; }
+  /* punto de partida cards */
+  .partida-grid{ display:grid; grid-template-columns:repeat(3,1fr); gap:16px; margin-top:44px; }
+  @media(max-width:900px){ .partida-grid{ grid-template-columns:1fr; } }
+  .partida-card{ background:var(--white); border:1px solid var(--mint-line); border-radius:4px 26px 4px 26px; padding:28px 26px; }
+  .partida-card .sname{ font-size:13px; font-weight:800; text-transform:uppercase; letter-spacing:.04em; color:var(--green-mid); }
+  .partida-card .spct{ font-size:clamp(46px,5vw,64px); font-weight:900; margin-top:10px; line-height:1; }
+  .partida-card .meta-title{ font-size:11px; font-weight:800; text-transform:uppercase; letter-spacing:.05em; opacity:.5; margin-top:20px; }
+  .partida-card .meta-list{ margin-top:8px; display:flex; flex-direction:column; gap:4px; }
+  .partida-card .meta-list div{ font-size:13px; font-weight:700; }
+  .partida-card .meta-list div b{ color:var(--orange); font-weight:900; }
+
+  .ojo-card{ margin-top:22px; background:var(--orange-soft); border-radius:4px 22px 4px 22px; padding:22px 26px; display:flex; gap:14px; }
+  .ojo-card .ico{ font-size:20px; }
+  .ojo-card p{ font-size:14px; font-weight:600; line-height:1.6; color:#7a2f10; }
+  .ojo-card b{ font-weight:900; }
+
+  /* resumen final */
+  .resumen-grid{ display:grid; grid-template-columns:repeat(3,1fr); gap:2px; margin-top:44px; background:rgba(0,34,29,.1); }
+  @media(max-width:900px){ .resumen-grid{ grid-template-columns:1fr; } }
+  .resumen-card{ background:var(--white); padding:32px 26px; }
+  .resumen-card .sname{ font-size:12px; font-weight:900; text-transform:uppercase; letter-spacing:.06em; color:var(--orange); }
+  .resumen-card p{ font-size:17px; font-weight:800; margin-top:12px; line-height:1.4; }
+
+  /* jump cards reused for meta gaps */
+  .jump-grid{ display:grid; grid-template-columns:1fr 1fr; gap:18px; margin-top:20px; }
   @media(max-width:760px){ .jump-grid{ grid-template-columns:1fr; } }
-  .jump-card{ background:var(--white); border:1px solid var(--mint-line); border-radius:4px 26px 4px 26px; padding:30px; }
-  .jump-card .label{ font-size:12.5px; font-weight:800; text-transform:uppercase; letter-spacing:.05em; color:var(--green-mid); }
-  .jump-row{ display:flex; align-items:baseline; gap:14px; margin-top:14px; flex-wrap:wrap; }
-  .jump-row .from{ font-size:22px; font-weight:700; opacity:.35; text-decoration:line-through; }
-  .jump-row .arrow{ opacity:.35; font-weight:900; }
-  .jump-row .to{ font-size:clamp(36px,4vw,54px); font-weight:900; color:var(--orange); }
-  .jump-card .note{ font-size:12.5px; opacity:.6; margin-top:10px; }
 
-  .blank-card{
-    background:var(--deep); color:var(--white); border-radius:4px 30px 4px 30px;
-    padding:46px 40px; margin-top:24px; display:flex; align-items:center; gap:34px; flex-wrap:wrap;
-  }
-  .blank-card .value{ font-size:clamp(60px,7vw,96px); font-weight:900; color:var(--acid); line-height:.9; }
-  .blank-card p{ font-size:15px; opacity:.72; max-width:520px; line-height:1.6; }
-
-  /* ---------- CTA ---------- */
+  /* CTA */
   .cta{ background:var(--deep); color:var(--white); padding:100px 0 0; }
-  .cta-kinetic{ font-size:clamp(40px,8vw,96px); line-height:.96; margin-bottom:14px; }
-  .cta-kinetic .w1{ color:var(--white); }
-  .cta-kinetic .w2{ color:var(--orange); }
-  .cta-kinetic .w3{ color:var(--acid); }
+  .cta-kinetic{ font-size:clamp(38px,7.6vw,92px); line-height:.96; margin-bottom:14px; }
+  .cta-kinetic .w1{ color:var(--white); } .cta-kinetic .w2{ color:var(--orange); } .cta-kinetic .w3{ color:var(--acid); }
   .cta .lede{ font-size:17px; max-width:660px; opacity:.68; line-height:1.65; margin-top:18px; font-weight:300; }
-
   .stake-grid{ display:grid; grid-template-columns:repeat(5,1fr); gap:2px; margin-top:56px; background:rgba(255,255,255,.1); }
   @media(max-width:980px){ .stake-grid{ grid-template-columns:repeat(3,1fr);} }
   @media(max-width:640px){ .stake-grid{ grid-template-columns:repeat(2,1fr);} }
-  .stake-card{
-    background:var(--deep); padding:28px 20px 24px; display:flex; flex-direction:column; gap:12px;
-    transition:background .3s ease;
-  }
+  .stake-card{ background:var(--deep); padding:28px 20px 24px; display:flex; flex-direction:column; gap:12px; transition:background .3s ease; }
   .stake-card:hover{ background:#003c37; }
-  .stake-card .icon{
-    width:40px; height:40px; border-radius:0 10px 0 10px; background:var(--orange); color:var(--white);
-    display:flex; align-items:center; justify-content:center; font-weight:900; font-size:13px;
-  }
+  .stake-card .icon{ width:40px; height:40px; border-radius:0 10px 0 10px; background:var(--orange); color:var(--white); display:flex; align-items:center; justify-content:center; font-weight:900; font-size:13px; }
   .stake-card .title{ font-size:15px; font-weight:900; }
   .stake-card .ask{ font-size:12.5px; opacity:.62; line-height:1.5; }
-
   .principle-row{ display:flex; gap:2px; margin-top:2px; flex-wrap:wrap; background:rgba(255,255,255,.1); }
   .principle{ flex:1 1 240px; background:var(--deep); padding:26px 24px; }
   .principle .num-tag{ font-size:12px; font-weight:900; color:var(--acid); letter-spacing:.05em; }
   .principle p{ font-size:15px; font-weight:700; margin-top:8px; line-height:1.45; }
-
   .cta-ticker{ margin-top:70px; }
 
   footer{ padding:30px 0; background:var(--deep); color:rgba(255,255,255,.4); }
@@ -217,55 +208,108 @@
 
 <div class="ticker">
   <div class="ticker-track">
-    <span>GROWTH · KICK OFF SEPTIEMBRE &nbsp;•&nbsp; <em>FOCO EN OBJETIVOS</em> &nbsp;•&nbsp; MÁS VELOCIDAD PARA EXPERIMENTAR &nbsp;•&nbsp; REVISAR METAS SOBRE LA MARCHA &nbsp;•&nbsp;</span>
-    <span>GROWTH · KICK OFF SEPTIEMBRE &nbsp;•&nbsp; <em>FOCO EN OBJETIVOS</em> &nbsp;•&nbsp; MÁS VELOCIDAD PARA EXPERIMENTAR &nbsp;•&nbsp; REVISAR METAS SOBRE LA MARCHA &nbsp;•&nbsp;</span>
+    <span>GROWTH DIGITAL · KICK-OFF SEPTIEMBRE &nbsp;•&nbsp; <em>FOCO EN OBJETIVOS</em> &nbsp;•&nbsp; MÁS VELOCIDAD PARA EXPERIMENTAR &nbsp;•&nbsp; REVISAR METAS SOBRE LA MARCHA &nbsp;•&nbsp;</span>
+    <span>GROWTH DIGITAL · KICK-OFF SEPTIEMBRE &nbsp;•&nbsp; <em>FOCO EN OBJETIVOS</em> &nbsp;•&nbsp; MÁS VELOCIDAD PARA EXPERIMENTAR &nbsp;•&nbsp; REVISAR METAS SOBRE LA MARCHA &nbsp;•&nbsp;</span>
   </div>
 </div>
 
 <nav class="navdots">
   <a href="#hero" data-label="Inicio"></a>
+  <a href="#partida" data-label="Punto de partida"></a>
   <a href="#adquisicion" data-label="Adquisición"></a>
   <a href="#habitualidad" data-label="Habitualidad"></a>
   <a href="#bezza" data-label="Bezza Hub"></a>
-  <a href="#septiembre" data-label="Septiembre"></a>
+  <a href="#resumen" data-label="Resumen"></a>
   <a href="#foco" data-label="Foco"></a>
 </nav>
 
-<!-- ================= HERO ================= -->
+<!-- ================= HERO / PORTADA ================= -->
 <header class="hero" id="hero">
   <div class="ghost">09</div>
   <div class="wrap">
-    <div class="tab"><span>Growth · Kick Off</span></div>
-    <h1>Septiembre arranca<br>de <em>cero</em>. Agosto nos dice<br>dónde <span class="pop">empujar</span>.</h1>
-    <p class="lede">Repaso de cumplimiento por squad y la agenda de foco para el mes: objetivos claros y más velocidad para experimentar.</p>
+    <div class="tab"><span>Slide 1 · Portada</span></div>
+    <h1>Kick-off Growth Digital<br><em>Septiembre</em> <span class="pop">2026</span></h1>
+    <p class="lede">De dónde venimos (cierre Agosto) → qué vamos a atacar este mes.</p>
 
     <div class="hero-kpis reveal">
       <div class="hero-kpi">
         <div class="squad">01 · Adquisición y Crosselling</div>
-        <div class="value num">56,3%</div>
-        <div class="frac num">6.668 / 11.842</div>
+        <div class="value num">56%</div>
+        <div class="frac num">Cumplimiento Agosto</div>
       </div>
       <div class="hero-kpi ok">
         <div class="squad">02 · Habitualidad</div>
-        <div class="value num">99,2% 🎉</div>
-        <div class="frac num">910.942 / 918.142</div>
+        <div class="value num">109%</div>
+        <div class="frac num">Cumplimiento Agosto</div>
       </div>
-      <div class="hero-kpi danger">
+      <div class="hero-kpi">
         <div class="squad">03 · Bezza Hub</div>
-        <div class="value num">38,8%</div>
-        <div class="frac num">16.480 / 42.448</div>
+        <div class="value num">56%</div>
+        <div class="frac num">Cumplimiento Agosto</div>
       </div>
     </div>
   </div>
 </header>
 
-<!-- ================= SLIDE 1 — ADQUISICIÓN ================= -->
+<!-- ================= SLIDE 2 — PUNTO DE PARTIDA ================= -->
+<section class="block on-light" id="partida">
+  <div class="wrap">
+    <div class="reveal">
+      <div class="tab"><span>Slide 2 · Punto de partida</span></div>
+      <h2 class="section-title">Dos squads entran con deuda.<br>Uno con envión — pero descontado.</h2>
+      <p class="section-sub">Cómo cerramos Agosto, y contra qué objetivo de Plan Anual arrancamos Septiembre.</p>
+    </div>
+
+    <div class="partida-grid reveal">
+      <div class="partida-card">
+        <div class="sname">Adquisición y Crosselling</div>
+        <div class="spct num" style="color:var(--danger)">56%</div>
+        <div class="meta-title">Meta Septiembre (Plan Anual)</div>
+        <div class="meta-list num">
+          <div><b>8.223</b> Préstamos</div>
+          <div><b>447</b> Seguros</div>
+          <div><b>1.785</b> Tarjeta</div>
+        </div>
+      </div>
+      <div class="partida-card">
+        <div class="sname">Habitualidad</div>
+        <div class="spct num" style="color:var(--ok)">109%</div>
+        <div class="meta-title">Meta Septiembre (Plan Anual)</div>
+        <div class="meta-list num">
+          <div><b>370.863</b> Medios de pago digitales</div>
+          <div><b>444.123</b> Tarjeta de crédito</div>
+          <div><b>400.275</b> Pago de servicios</div>
+          <div><b>155.991</b> Inversiones</div>
+          <div><b>346.356</b> Clientes habituales</div>
+          <div><b>194</b> Tienda Bancor</div>
+        </div>
+      </div>
+      <div class="partida-card">
+        <div class="sname">Bezza Hub</div>
+        <div class="spct num" style="color:var(--danger)">56%</div>
+        <div class="meta-title">Meta Septiembre (Plan Anual)</div>
+        <div class="meta-list num">
+          <div><b>67.314</b> Altas</div>
+          <div><b>5.161</b> DAU's</div>
+          <div><b>180</b> Bezza Pay</div>
+        </div>
+      </div>
+    </div>
+
+    <div class="ojo-card reveal">
+      <span class="ico">👁</span>
+      <p><b>Ojo con la estacionalidad:</b> la meta de septiembre para Habitualidad en Medios de pago digitales (370.863) es <b>más baja</b> que la de agosto (367.191, con un real logrado de 496.193). El envión ya está descontado en la meta — hay que <b>sostener, no relajar</b>.</p>
+    </div>
+  </div>
+</section>
+
+<!-- ================= SLIDE 3-4 — ADQUISICIÓN ================= -->
 <section class="block on-light" id="adquisicion">
   <div class="ghost light" style="right:-20px; top:40px;">56</div>
   <div class="wrap">
     <div class="reveal">
-      <div class="tab"><span>Slide 1 · Adquisición y Crosselling</span></div>
-      <h2 class="section-title">Alta cuenta inversiones sostiene<br>el squad; Seguros y TC frenan.</h2>
+      <div class="tab"><span>Slide 3-4 · Adquisición y Crosselling</span></div>
+      <h2 class="section-title">Ningún producto llegó al 90%.<br>Alta cuenta inversiones, la excepción de un evento puntual.</h2>
       <div class="po-row">
         <div class="po-badge">EM</div>
         <div class="po-name">Ezequiel Marchese<span>Product Owner</span></div>
@@ -274,25 +318,33 @@
 
     <div class="squad-summary reveal">
       <div>
-        <div class="big-value num">56,3%</div>
-        <div class="big-frac num">6.668 / 11.842 · cumplimiento Agosto</div>
+        <div class="big-value num">56%</div>
+        <div class="big-frac num">Cumplimiento Agosto</div>
       </div>
       <div class="meter-wrap">
         <div class="meter">
-          <div class="seg on"></div><div class="seg on"></div><div class="seg on"></div><div class="seg on"></div><div class="seg on"></div><div class="seg on"></div>
+          <div class="seg on danger"></div><div class="seg on danger"></div><div class="seg on danger"></div><div class="seg on danger"></div><div class="seg on danger"></div><div class="seg on danger"></div>
           <div class="seg"></div><div class="seg"></div><div class="seg"></div><div class="seg"></div>
         </div>
         <div class="meter-label">Cada bloque = 10% de la meta</div>
       </div>
     </div>
 
+    <div class="meta-row reveal">
+      <span class="meta-label">Meta Sep</span>
+      <span class="meta-chip num">8.223 Préstamos</span>
+      <span class="meta-chip num">447 Seguros</span>
+      <span class="meta-chip num">1.785 Tarjeta</span>
+    </div>
+
     <div class="product-grid reveal">
-      <div class="stat-block"><div class="corner ok"></div>
+      <div class="stat-block"><div class="corner warn"></div>
         <div class="pct">88,6%</div>
         <div class="pname">Alta cuenta inversiones</div>
         <div class="frac num">930 / 1.050</div>
+        <div class="note">Carga concentrada el 25/8</div>
       </div>
-      <div class="stat-block"><div class="corner warn"></div>
+      <div class="stat-block"><div class="corner danger"></div>
         <div class="pct">58,3%</div>
         <div class="pname">Préstamos personales</div>
         <div class="frac num">5.098 / 8.737</div>
@@ -311,29 +363,32 @@
 
     <div class="insight-grid">
       <div class="card reveal">
-        <h4>Alta cuenta inversiones, casi en la meta</h4>
-        <p>Con <span class="highlight">88,6%</span> de cumplimiento, es el único producto del squad que se acerca al objetivo — la referencia a seguir dentro de Adquisición.</p>
+        <h4>Un evento, no un flujo</h4>
+        <p>Alta cuenta inversiones llegó a <span class="highlight">88,6%</span> con toda la carga concentrada el 25/8 — reacciona a un evento puntual, no a un flujo constante.</p>
       </div>
       <div class="card neg reveal">
-        <h4>Seguros y TC, muy atrasados</h4>
-        <p>Seguros tuvo campaña activa todo el mes (BS82, primera cuota bonificada) y aun así quedó en <span class="highlight">23,8%</span>. El estímulo no fue el problema — hay que mirar más abajo en el funnel.</p>
+        <h4>BS82 corrió y no alcanzó</h4>
+        <p>La campaña de Seguros (1ra cuota bonificada) corrió del 10 al 21/8 y no movió el número — quedó en <span class="highlight">23,8%</span>. Oferta fuerte, resultado plano.</p>
       </div>
     </div>
 
-    <div class="action-card reveal">
-      <div class="tag">Para Septiembre</div>
-      <p>Revisar el funnel completo de Seguros y Tarjeta de crédito antes de repetir el mismo estímulo — el problema puede no ser de tráfico sino de conversión.</p>
+    <div class="lever-title reveal">Palancas para Septiembre</div>
+    <div class="lever-row reveal">
+      <div class="lever"><div class="num-tag">01</div><p>Seguros: resolver la causa raíz antes de repetir la campaña — diagnóstico rápido de funnel (¿cuánta gente llega a la landing? ¿dónde abandona?).</p></div>
+      <div class="lever"><div class="num-tag">02</div><p>Tarjeta: meta baja en Sep (1.785) — la más chica del año para este producto. Buen mes para cerrar la brecha sin esfuerzo extraordinario.</p></div>
+      <div class="lever"><div class="num-tag">03</div><p>Replicar el patrón de "evento puntual" que funcionó en Inversiones — probarlo en Préstamos o Tarjeta en vez de un goteo constante.</p></div>
+      <div class="lever"><div class="num-tag">04</div><p>Landing Alta TC venía corriendo hasta el 4/9 — confirmar si se relanza o se corta, para no perder tracción al arrancar el mes.</p></div>
     </div>
   </div>
 </section>
 
-<!-- ================= SLIDE 2 — HABITUALIDAD ================= -->
+<!-- ================= SLIDE 5-6 — HABITUALIDAD ================= -->
 <section class="block on-dark" id="habitualidad">
-  <div class="ghost dark" style="right:-20px; top:40px;">99</div>
+  <div class="ghost dark" style="right:-20px; top:40px;">109</div>
   <div class="wrap">
     <div class="reveal">
-      <div class="tab on-dark"><span>Slide 2 · Habitualidad</span></div>
-      <h2 class="section-title">El squad más sólido del mes,<br>con margen para exportar la fórmula.</h2>
+      <div class="tab on-dark"><span>Slide 5-6 · Habitualidad</span></div>
+      <h2 class="section-title">109%, empujado por Medios de pago.<br>Ojo: la vara de Sep ya viene más baja.</h2>
       <div class="po-row">
         <div class="po-badge">DP</div>
         <div class="po-name">Daniel Pauletich<span>Product Owner</span></div>
@@ -342,71 +397,75 @@
 
     <div class="squad-summary reveal">
       <div>
-        <div class="big-value num">99,2% 🎉</div>
-        <div class="big-frac num">910.942 / 918.142 · cumplimiento Agosto</div>
+        <div class="big-value num">109%</div>
+        <div class="big-frac num">Cumplimiento Agosto</div>
       </div>
       <div class="meter-wrap">
         <div class="meter">
           <div class="seg on ok"></div><div class="seg on ok"></div><div class="seg on ok"></div><div class="seg on ok"></div><div class="seg on ok"></div><div class="seg on ok"></div><div class="seg on ok"></div><div class="seg on ok"></div><div class="seg on ok"></div><div class="seg on ok"></div>
+          <span class="overflow-chip">+9%</span>
         </div>
         <div class="meter-label">Cada bloque = 10% de la meta</div>
       </div>
     </div>
 
+    <div class="meta-row reveal">
+      <span class="meta-label">Meta Sep</span>
+      <span class="meta-chip num">370.863 MP digitales</span>
+      <span class="meta-chip num">444.123 TC</span>
+      <span class="meta-chip num">400.275 Pago servicios</span>
+      <span class="meta-chip num">155.991 Inversiones</span>
+    </div>
+
     <div class="product-grid reveal">
       <div class="stat-block"><div class="corner ok"></div>
-        <div class="pct">121,5%</div>
+        <div class="pct">135%</div>
         <div class="pname">Medios de pago digitales</div>
-        <div class="frac num">446.119 / 367.191</div>
-        <div class="overflow-badge">+21,5% sobre meta</div>
-      </div>
-      <div class="stat-block"><div class="corner ok"></div>
-        <div class="pct">94,5%</div>
-        <div class="pname">Tarjeta de crédito (consumo)</div>
-        <div class="frac num">415.322 / 439.726</div>
-      </div>
-      <div class="stat-block"><div class="corner ok"></div>
-        <div class="pct">86,4%</div>
-        <div class="pname">Inversiones (renovaciones)</div>
-        <div class="frac num">133.423 / 154.447</div>
+        <div class="frac num">496.193 / 367.191</div>
+        <div class="overflow-badge">+35% sobre meta</div>
       </div>
       <div class="stat-block"><div class="corner warn"></div>
-        <div class="pct">83,6%</div>
-        <div class="pname">Pago de servicios (frecuencia)</div>
-        <div class="frac num">331.327 / 396.312</div>
+        <div class="pct">96%</div>
+        <div class="pname">Tarjeta de crédito (consumo)</div>
+        <div class="note">La más cerca de meta sin llegar</div>
       </div>
-      <div class="stat-block"><div class="corner danger"></div>
-        <div class="pct">38,0%</div>
-        <div class="pname">Tienda Bancor</div>
-        <div class="frac num">73 / 192</div>
+      <div class="stat-block"><div class="corner warn"></div>
+        <div class="pct">94%</div>
+        <div class="pname">Inversiones (renovaciones)</div>
+      </div>
+      <div class="stat-block"><div class="corner warn"></div>
+        <div class="pct">91%</div>
+        <div class="pname">Pago de servicios (frecuencia)</div>
       </div>
     </div>
 
     <div class="insight-grid">
       <div class="card reveal">
-        <h4>Medios de pago digitales voló</h4>
-        <p><span class="highlight">121,5%</span> de cumplimiento con varias campañas de tarjeta corriendo en simultáneo — supermercados, gastronomía y shopping empujando juntas.</p>
+        <h4>El motor del squad</h4>
+        <p>Medios de pago digitales llegó a <span class="highlight">135%</span>. Coincide con las campañas Always On de tarjeta en supermercados — SQHAB02, SQHAB03, Jueves de Shopping.</p>
       </div>
-      <div class="card neg reveal">
-        <h4>Tienda Bancor, atrás</h4>
-        <p>En <span class="highlight">38,0%</span>, aunque es la métrica de menor peso relativo del squad — no compromete el resultado general.</p>
+      <div class="card note reveal">
+        <h4>Por debajo, pero no pesan</h4>
+        <p>Pago de servicios (<span class="highlight">91%</span>) e Inversiones (<span class="highlight">94%</span>) quedaron debajo de meta, pero no lastraron el resultado total del squad.</p>
       </div>
     </div>
 
-    <div class="action-card reveal">
-      <div class="tag">Para Septiembre</div>
-      <p>Replicar la fórmula que funcionó — Always On + refuerzos puntuales. Vale la pena que Daniel comparta el approach con los otros squads.</p>
+    <div class="lever-title reveal">Palancas para Septiembre</div>
+    <div class="lever-row reveal">
+      <div class="lever"><div class="num-tag">01</div><p>No tocar lo que funciona — extender el mecanismo de Medios de pago digitales a Pago de servicios (mismo copy/canal, lógica de recurrencia parecida).</p></div>
+      <div class="lever"><div class="num-tag">02</div><p>Tarjeta de crédito (consumo) en 96% — candidato a cerrar la brecha rápido reforzando frecuencia en la recta final, si las campañas siguen activas.</p></div>
+      <div class="lever"><div class="num-tag">03</div><p>La meta de Sep en Medios de pago (370.863) es más baja que Agosto — no leer un "buen septiembre" como más esfuerzo si en realidad es una vara más baja.</p></div>
     </div>
   </div>
 </section>
 
-<!-- ================= SLIDE 3 — BEZZA HUB ================= -->
+<!-- ================= SLIDE 7-8 — BEZZA HUB ================= -->
 <section class="block on-light" id="bezza">
-  <div class="ghost light" style="right:-20px; top:40px;">39</div>
+  <div class="ghost light" style="right:-20px; top:40px;">56</div>
   <div class="wrap">
     <div class="reveal">
-      <div class="tab"><span>Slide 3 · Bezza Hub</span></div>
-      <h2 class="section-title">Pay y DAU sostienen —<br>Altas necesita otra estrategia.</h2>
+      <div class="tab"><span>Slide 7-8 · Bezza Hub</span></div>
+      <h2 class="section-title">El cuello de botella no es tráfico:<br>es conversión a alta.</h2>
       <div class="po-row">
         <div class="po-badge">MZ</div>
         <div class="po-name">Melisa Zozaya<span>Product Owner</span></div>
@@ -415,88 +474,90 @@
 
     <div class="squad-summary reveal">
       <div>
-        <div class="big-value num">38,8%</div>
-        <div class="big-frac num">16.480 / 42.448 · cumplimiento Agosto</div>
+        <div class="big-value num">56%</div>
+        <div class="big-frac num">Cumplimiento Agosto</div>
       </div>
       <div class="meter-wrap">
         <div class="meter">
-          <div class="seg on danger"></div><div class="seg on danger"></div><div class="seg on danger"></div><div class="seg on danger"></div>
-          <div class="seg"></div><div class="seg"></div><div class="seg"></div><div class="seg"></div><div class="seg"></div><div class="seg"></div>
+          <div class="seg on danger"></div><div class="seg on danger"></div><div class="seg on danger"></div><div class="seg on danger"></div><div class="seg on danger"></div><div class="seg on danger"></div>
+          <div class="seg"></div><div class="seg"></div><div class="seg"></div><div class="seg"></div>
         </div>
         <div class="meter-label">Cada bloque = 10% de la meta</div>
       </div>
     </div>
 
+    <div class="meta-row reveal">
+      <span class="meta-label">Meta Sep</span>
+      <span class="meta-chip num">67.314 Altas</span>
+      <span class="meta-chip num">5.161 DAU's</span>
+      <span class="meta-chip num">180 Bezza Pay</span>
+    </div>
+
     <div class="product-grid reveal">
+      <div class="stat-block"><div class="corner danger"></div>
+        <div class="pct">45%</div>
+        <div class="pname">Bezza Billetera — Altas</div>
+        <div class="frac num">17.199 / 38.204</div>
+        <div class="note">El más resagado del squad</div>
+      </div>
       <div class="stat-block"><div class="corner ok"></div>
-        <div class="pct">83,9%</div>
+        <div class="pct">160%</div>
+        <div class="pname">Bezza Billetera — Activos (DAU's)</div>
+        <div class="overflow-badge">+60% sobre meta</div>
+      </div>
+      <div class="stat-block"><div class="corner warn"></div>
+        <div class="pct">84%</div>
         <div class="pname">Bezza Pay</div>
         <div class="frac num">151 / 180</div>
       </div>
-      <div class="stat-block"><div class="corner ok"></div>
-        <div class="pct">81,7%</div>
-        <div class="pname">Bezza Billetera — Activos (DAU)</div>
-        <div class="frac num">3.321 / 4.064</div>
-      </div>
-      <div class="stat-block"><div class="corner danger"></div>
-        <div class="pct">34,0%</div>
-        <div class="pname">Bezza Billetera — Altas</div>
-        <div class="frac num">13.008 / 38.204</div>
-      </div>
     </div>
 
-    <div class="insight-grid">
+    <div class="insight-grid cols-3">
       <div class="card reveal">
-        <h4>Pay y DAU cerca de la meta</h4>
-        <p>Ambos productos rondan el <span class="highlight">82–84%</span> de cumplimiento y sostienen el rendimiento del squad frente al freno de Altas.</p>
+        <h4>DAU's al 160%</h4>
+        <p>La gente que ya está en la billetera <span class="highlight">la usa bien</span>. El problema está más arriba del funnel: volumen de altas nuevas o el paso registro → alta.</p>
       </div>
       <div class="card neg reveal">
-        <h4>Altas, muy atrasado</h4>
-        <p>En <span class="highlight">34,0%</span>, incluso con la campaña "BEZZA MUNDIAL" activa casi todo el mes (10/8–4/9). El estímulo no alcanzó.</p>
+        <h4>Altas en 45%</h4>
+        <p>17.199 de 38.204 — con la meta de Sep casi duplicándose (<span class="highlight">67.314</span>), "más de lo mismo" no alcanza.</p>
+      </div>
+      <div class="card note reveal">
+        <h4>CPAs dispares en paid</h4>
+        <p>Google Ads: entre <span class="highlight">$771 y más de $5.000</span> por conversión. En Meta, tráfico Onelink con millones de "conversiones" — a revisar qué están contando como tal.</p>
       </div>
     </div>
 
-    <div class="action-card reveal">
-      <div class="tag">Para Septiembre</div>
-      <p>La meta de Altas se dispara a 67.314 (casi el doble que agosto). Antes de escalar medios pagos, auditar el funnel completo (tráfico → landing → conversión → alta) con Melisa y Berenice.</p>
+    <div class="lever-title reveal">Palancas para Septiembre</div>
+    <div class="lever-row reveal">
+      <div class="lever"><div class="num-tag">01</div><p>Diagnosticar el funnel completo de conversión (tráfico → landing → conversión → alta) — el tablero de Power BI ya está pensado para esto.</p></div>
+      <div class="lever"><div class="num-tag">02</div><p>Revisar campañas pausadas antes de sumar presupuesto nuevo — ej. "Performance Descargas Placa fija" tenía CPA bajo ($399) y hoy está en pausa.</p></div>
+      <div class="lever"><div class="num-tag">03</div><p>La meta de Altas casi se duplica — si en agosto no llegamos al 45% de una meta más chica, septiembre necesita una palanca nueva: oferta, canal o revisión de onboarding.</p></div>
+      <div class="lever"><div class="num-tag">04</div><p>Bezza Pay (84%) es el más fácil de cerrar — priorizarlo en la primera quincena antes de volcar todo el esfuerzo a Altas.</p></div>
     </div>
   </div>
 </section>
 
-<!-- ================= SLIDE 4 — PUNTO DE PARTIDA ================= -->
-<section class="block on-light" id="septiembre" style="background:var(--mint);">
-  <div class="ghost light" style="right:-20px; top:40px;">0</div>
+<!-- ================= SLIDE 9 — RESUMEN DE PALANCAS ================= -->
+<section class="block on-light" id="resumen" style="background:var(--mint);">
   <div class="wrap">
     <div class="reveal">
-      <div class="tab"><span>Slide 4 · Septiembre, punto de partida</span></div>
-      <h2 class="section-title">Arrancamos de cero. Las metas<br>no dan tregua.</h2>
-      <p class="section-sub">Ningún squad tiene carga real todavía en el Sheet para septiembre.</p>
+      <div class="tab"><span>Slide 9 · Resumen</span></div>
+      <h2 class="section-title">Una palanca por squad<br>para cerrar el kick-off.</h2>
     </div>
 
-    <div class="jump-grid reveal">
-      <div class="jump-card">
-        <div class="label">Bezza Billetera — Altas</div>
-        <div class="jump-row">
-          <span class="from num">38.204</span>
-          <span class="arrow">→</span>
-          <span class="to num">67.314</span>
-        </div>
-        <div class="note">La meta más alta del año — casi el doble que agosto.</div>
+    <div class="resumen-grid reveal">
+      <div class="resumen-card">
+        <div class="sname">Adquisición y Crosselling</div>
+        <p>Diagnosticar el funnel de Seguros antes de repetir la campaña.</p>
       </div>
-      <div class="jump-card">
-        <div class="label">Seguros</div>
-        <div class="jump-row">
-          <span class="from num">357</span>
-          <span class="arrow">→</span>
-          <span class="to num">447</span>
-        </div>
-        <div class="note">El otro salto marcado del mes vs. agosto.</div>
+      <div class="resumen-card">
+        <div class="sname">Habitualidad</div>
+        <p>No tocar lo que funciona — extender Medios de pago digitales a Pago de servicios.</p>
       </div>
-    </div>
-
-    <div class="blank-card reveal">
-      <div class="value">0</div>
-      <p>días de carga real hasta ahora. En cuanto haya unos días de datos, primer corte de ritmo real — acumulado vs. objetivo prorrateado — para cada squad.</p>
+      <div class="resumen-card">
+        <div class="sname">Bezza Hub</div>
+        <p>El cuello de botella no es tráfico, es conversión — diagnosticar el funnel completo.</p>
+      </div>
     </div>
   </div>
 </section>
@@ -509,46 +570,17 @@
     <p class="lede reveal">Cumplir la meta no alcanza si tardamos un mes en aprender. Este mes cada squad tiene que presionar a sus stakeholders para que el ciclo de experimentación se acorte — y revisar objetivos sobre la marcha, no esperar al cierre.</p>
 
     <div class="stake-grid reveal">
-      <div class="stake-card">
-        <div class="icon">CRM</div>
-        <div class="title">CRM</div>
-        <div class="ask">Prioridad y tiempos de entrega de campañas — sin colas.</div>
-      </div>
-      <div class="stake-card">
-        <div class="icon">AG</div>
-        <div class="title">Agencias</div>
-        <div class="ask">Piezas y pauta listas a tiempo, sin cuellos de botella creativos.</div>
-      </div>
-      <div class="stake-card">
-        <div class="icon">DT</div>
-        <div class="title">Datos</div>
-        <div class="ask">Bases actualizadas y segmentadas, disponibles sin demora.</div>
-      </div>
-      <div class="stake-card">
-        <div class="icon">SG</div>
-        <div class="title">Segmentos</div>
-        <div class="ask">Armado ágil de públicos y grupos de control bien diseñados.</div>
-      </div>
-      <div class="stake-card">
-        <div class="icon">IN</div>
-        <div class="title">Inteligencia</div>
-        <div class="ask">Lectura rápida de resultados para iterar sin esperar el cierre de mes.</div>
-      </div>
+      <div class="stake-card"><div class="icon">CRM</div><div class="title">CRM</div><div class="ask">Prioridad y tiempos de entrega de campañas — sin colas.</div></div>
+      <div class="stake-card"><div class="icon">AG</div><div class="title">Agencias</div><div class="ask">Piezas y pauta listas a tiempo, sin cuellos de botella creativos.</div></div>
+      <div class="stake-card"><div class="icon">DT</div><div class="title">Datos</div><div class="ask">Bases actualizadas y segmentadas, disponibles sin demora.</div></div>
+      <div class="stake-card"><div class="icon">SG</div><div class="title">Segmentos</div><div class="ask">Armado ágil de públicos y grupos de control bien diseñados.</div></div>
+      <div class="stake-card"><div class="icon">IN</div><div class="title">Inteligencia</div><div class="ask">Lectura rápida de resultados para iterar sin esperar el cierre de mes.</div></div>
     </div>
 
     <div class="principle-row reveal">
-      <div class="principle">
-        <div class="num-tag">01</div>
-        <p>Cada squad defiende su objetivo — no lo explica, lo persigue.</p>
-      </div>
-      <div class="principle">
-        <div class="num-tag">02</div>
-        <p>Si un stakeholder frena el ritmo, se escala esta semana — no al cierre del mes.</p>
-      </div>
-      <div class="principle">
-        <div class="num-tag">03</div>
-        <p>Los objetivos se revisan con el dato en la mano, no solo el día 1.</p>
-      </div>
+      <div class="principle"><div class="num-tag">01</div><p>Cada squad defiende su objetivo — no lo explica, lo persigue.</p></div>
+      <div class="principle"><div class="num-tag">02</div><p>Si un stakeholder frena el ritmo, se escala esta semana — no al cierre del mes.</p></div>
+      <div class="principle"><div class="num-tag">03</div><p>Los objetivos se revisan con el dato en la mano, no solo el día 1.</p></div>
     </div>
 
     <div class="ticker cta-ticker">
@@ -562,21 +594,18 @@
 
 <footer>
   <div class="wrap">
-    <span>GROWTH · BANCOR</span>
-    <span>KICK OFF SEPTIEMBRE — RESUMEN AGOSTO 2026</span>
+    <span>GROWTH DIGITAL · BANCOR</span>
+    <span>KICK-OFF SEPTIEMBRE 2026 — CIERRE AGOSTO</span>
   </div>
 </footer>
 
 <script>
   const revealEls = document.querySelectorAll('.reveal');
   const io = new IntersectionObserver((entries)=>{
-    entries.forEach(e=>{
-      if(e.isIntersecting){ e.target.classList.add('show'); io.unobserve(e.target); }
-    });
+    entries.forEach(e=>{ if(e.isIntersecting){ e.target.classList.add('show'); io.unobserve(e.target); } });
   }, {threshold:0.12});
   revealEls.forEach(el=>io.observe(el));
 
-  // nav dots active state
   const navLinks = document.querySelectorAll('.navdots a');
   const sections = Array.from(navLinks).map(a=>document.querySelector(a.getAttribute('href')));
   const navIo = new IntersectionObserver((entries)=>{
